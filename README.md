@@ -1,4 +1,4 @@
-#MCShop - Online store for Minecraft servers
+# MCShop - Online store for Minecraft servers
 
 An online store that allows you to connect to the Minecraft server and automatically execute any command after confirming receipt of the payment
 
@@ -26,7 +26,7 @@ An online store that allows you to connect to the Minecraft server and automatic
 - Connecting with Minecraft server with RCON protocol
 - Support for most popular payment methods
 
-###TODO:
+### TODO:
 
 - More connection methods with Minecraft servers for security reasons
 - Showing player head next to nick in clients list (Minotaur API)
