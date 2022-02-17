@@ -32,3 +32,6 @@ An online store that allows you to connect to the Minecraft server and automatic
 - Showing player head next to nick in clients list (Minotaur API)
 - More Payment service provider
 
+
+# Warning!
+This is not complete so it's not recommended to using this application in this version.
