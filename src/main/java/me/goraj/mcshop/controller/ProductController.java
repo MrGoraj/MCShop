@@ -18,6 +18,16 @@ public class ProductController {
 
     @GetMapping(value = { "", "/" })
     public @NotNull Iterable<Product> getProducts() {
-        return productService.getAllProducts();
+        return productService.findAll();
+    }
+
+    @GetMapping(value = "/{id}")
+    public @NotNull Product getProduct(@PathVariable Long id) {
+        return productService.findById(id);
+    }
+
+    @PostMapping(value = { "", "/" })
+    public @NotNull Product saveProduct(@RequestBody Product product) {
+        return productService.save(new Product());
     }
 }

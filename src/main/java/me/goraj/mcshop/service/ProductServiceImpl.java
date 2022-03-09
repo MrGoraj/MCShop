@@ -10,19 +10,19 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class ProductServiceImpl implements ProductService {
 
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     public ProductServiceImpl(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 
     @Override
-    public Iterable<Product> getAllProducts() {
+    public Iterable<Product> findAll() {
         return productRepository.findAll();
     }
 
     @Override
-    public Product getProduct(long id) {
+    public Product findById(long id) {
         return productRepository
                 .findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
