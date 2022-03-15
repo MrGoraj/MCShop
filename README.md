@@ -8,22 +8,14 @@ An online store that allows you to connect to the Minecraft server and automatic
 * [Features](#features)
 <!-- * [Screenshots](#screenshots) -->
 
-## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it? 
-
-
 ## Technologies Used
 - Java 17
 - Spring Boot 2.6.0
-- Liquibase
 
 ## Features
 
 - Connecting with Front-End Server with REST API
-- Connecting with Minecraft server with RCON protocol
+- Connecting with Minecraft server with more secure protocol than RCON
 - Support for most popular payment methods
 
 ### TODO:
