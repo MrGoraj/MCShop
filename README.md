@@ -3,9 +3,9 @@
 An online store that allows you to connect to the Minecraft server and automatically execute any command after confirming receipt of the payment
 
 ## Table of Contents
-* [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
+* [TODO](#TODO)
 <!-- * [Screenshots](#screenshots) -->
 
 ## Technologies Used
@@ -16,11 +16,11 @@ An online store that allows you to connect to the Minecraft server and automatic
 
 - Connecting with Front-End Server with REST API
 - Connecting with Minecraft server with more secure protocol than RCON
-- Support for most popular payment methods
+- Support for MicroSMS(https://www.google.com) payment methods
 
 ### TODO:
 
-- More connection methods with Minecraft servers
+- Connection method with Minecraft servers
 - Showing player head next to nick in clients list (Minotaur API)
 - More Payment service provider
 
