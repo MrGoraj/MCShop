@@ -16,7 +16,7 @@ An online store that allows you to connect to the Minecraft server and automatic
 
 - Connecting with Front-End Server with REST API
 - Connecting with Minecraft server with more secure protocol than RCON
-- Support for MicroSMS(https://www.google.com) payment methods
+- Support for [MicroSMS](https://microsms.pl/) payment methods
 
 ### TODO:
 
