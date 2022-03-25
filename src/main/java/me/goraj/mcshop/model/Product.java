@@ -1,7 +1,5 @@
 package me.goraj.mcshop.model;
 
-
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;

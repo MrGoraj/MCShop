@@ -18,7 +18,8 @@ public class H2SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/h2_console/**").permitAll();
-        http.csrf().ignoringAntMatchers("/h2-console/**");
+//        http.csrf().ignoringAntMatchers("/h2-console/**");
+        http.csrf().disable();
         http.headers().frameOptions().sameOrigin();
     }
 }

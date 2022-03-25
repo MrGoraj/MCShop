@@ -5,12 +5,13 @@ import me.goraj.mcshop.service.ProductService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotNull;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/api/v1/products")
 public class ProductController {
 
-    private ProductService productService;
+    private final ProductService productService;
 
     public ProductController(ProductService productService) {
         this.productService = productService;
@@ -22,7 +23,7 @@ public class ProductController {
     }
 
     @GetMapping(value = "/{id}")
-    public @NotNull Product getProduct(@PathVariable Long id) {
+    public Optional<Product> getProduct(@PathVariable Long id) {
         return productService.findById(id);
     }
 
