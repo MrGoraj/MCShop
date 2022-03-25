@@ -10,7 +10,7 @@ An online store that allows you to connect to the Minecraft server and automatic
 
 ## Technologies Used
 - Java 17
-- Spring Boot 2.6.0
+- Spring Boot 2.6.4
 
 ## Features
 
