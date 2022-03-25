@@ -12,24 +12,39 @@ import java.util.Optional;
 @Transactional
 public class ProductServiceImpl implements ProductService {
 
-    private final ProductRepository productRepository;
+    private final ProductRepository repository;
 
-    public ProductServiceImpl(ProductRepository productRepository) {
-        this.productRepository = productRepository;
+    public ProductServiceImpl(ProductRepository repository) {
+        this.repository = repository;
     }
 
     @Override
     public Iterable<Product> findAll() {
-        return productRepository.findAll();
+        return repository.findAll();
     }
 
     @Override
     public Optional<Product> findById(@Min(value = 1L, message = "Invalid product ID.") long id) {
-        return productRepository.findById(id);
+        return repository.findById(id);
     }
 
     @Override
-    public Product save(Product product) {
-        return productRepository.save(product);
+    public Product create(Product product) {
+        return repository.save(product);
+    }
+
+    @Override
+    public void update(Long id, Product product) {
+        Product productToUpdate = repository.findById(id).get();
+        productToUpdate.setImage(product.getImage());
+        productToUpdate.setName(product.getName());
+        productToUpdate.setDescription(product.getDescription());
+        productToUpdate.setPrice(product.getPrice());
+        repository.save(productToUpdate);
+    }
+
+    @Override
+    public void delete(Long id) {
+        repository.deleteById(id);
     }
 }

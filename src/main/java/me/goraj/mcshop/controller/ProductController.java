@@ -29,6 +29,6 @@ public class ProductController {
 
     @PostMapping(value = { "", "/" })
     public @NotNull Product saveProduct(@RequestBody Product product) {
-        return productService.save(new Product());
+        return productService.create(new Product());
     }
 }
