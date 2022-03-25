@@ -29,6 +29,16 @@ public class ProductController {
 
     @PostMapping(value = { "", "/" })
     public @NotNull Product saveProduct(@RequestBody Product product) {
-        return productService.create(new Product());
+        return productService.create(product);
+    }
+
+    @PutMapping("{id")
+    public void updateProduct(@PathVariable Long id, @RequestBody Product product) {
+        productService.update(id, product);
+    }
+
+    @DeleteMapping("{id}")
+    public void deleteProduct(@PathVariable Long id) {
+        productService.delete(id);
     }
 }
