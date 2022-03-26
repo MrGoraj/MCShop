@@ -17,11 +17,11 @@ An online store that allows you to connect to the Minecraft server and automatic
 - Connecting with Front-End Server with REST API
 - Connecting with Minecraft server with more secure protocol than RCON
 - Support for [MicroSMS](https://microsms.pl/) payment methods
+- Showing player head next to nick in clients list with [Minotaur API](Minotar.net)
 
 ### TODO:
 
 - Connection method with Minecraft servers
-- Showing player head next to nick in clients list (Minotaur API)
 - More Payment service provider
 - Code refactoring because it's really messy now
 
