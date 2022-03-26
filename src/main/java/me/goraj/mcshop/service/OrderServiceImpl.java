@@ -2,10 +2,12 @@ package me.goraj.mcshop.service;
 
 import me.goraj.mcshop.model.Order;
 import me.goraj.mcshop.repository.OrderRepository;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.Optional;
 
+@Service
 public class OrderServiceImpl implements OrderService {
 
     OrderRepository repository;
