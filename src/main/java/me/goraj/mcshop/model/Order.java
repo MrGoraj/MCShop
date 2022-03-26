@@ -16,7 +16,10 @@ public class Order {
     @Column(nullable = false)
     private String customerName;
     @JsonFormat(pattern = "dd/MM/yyyy hh:mm")
+    private String customerAvatar;
     private LocalDate purchaseDate;
+
+    private final String minotaurApi = "https://minotar.net/helm/";
 
     public Long getId() {
         return id;
@@ -40,5 +43,13 @@ public class Order {
 
     public void setPurchaseDate(LocalDate purchaseDate) {
         this.purchaseDate = purchaseDate;
+    }
+
+    public String getCustomerAvatar() {
+        return customerAvatar;
+    }
+
+    public void setCustomerAvatar(String customerName) {
+        this.customerAvatar = minotaurApi + customerName;
     }
 }
