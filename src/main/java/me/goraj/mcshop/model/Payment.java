@@ -12,6 +12,10 @@ public class Payment {
         this.smsCode = smsCode;
     }
 
+    public Payment() {
+        
+    }
+
     public Long getUserId() {
         return userId;
     }
