@@ -29,11 +29,13 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Transactional
     public Product create(Product product) {
         return repository.save(product);
     }
 
     @Override
+    @Transactional
     public void update(Long id, Product product) {
         Product productToUpdate = repository.findById(id).get();
         productToUpdate.setImage(product.getImage());
@@ -44,6 +46,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Transactional
     public void delete(Long id) {
         repository.deleteById(id);
     }

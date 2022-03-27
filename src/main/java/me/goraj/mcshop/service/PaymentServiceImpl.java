@@ -20,7 +20,7 @@ public class PaymentServiceImpl {
         this.repository = repository;
     }
 
-    public Payment paymentVerification(Long userId, Long serviceId, String smsCode) throws IOException {
+    public Payment smsPaymentVerification(Long userId, Long serviceId, String smsCode) throws IOException {
         assert false;
         String api = "https://microsms.pl/api/v2/multi.php?userid=" + userId + "&code=" + serviceId + "&serviceid=" + smsCode;
 

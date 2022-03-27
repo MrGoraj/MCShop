@@ -4,6 +4,6 @@ import me.goraj.mcshop.model.Payment;
 
 public interface PaymentService {
 
-    Payment paymentVerification(Long userId, Long serviceId, String smsCode);
+    Payment smsPaymentVerification(Long userId, Long serviceId, String smsCode);
 
 }

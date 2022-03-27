@@ -18,6 +18,9 @@ public class Order {
     @JsonFormat(pattern = "dd/MM/yyyy hh:mm")
     private String customerAvatar;
     private LocalDate purchaseDate;
+    @OneToOne
+    @JoinColumn(name = "purchased_product_id")
+    private Product purchasedProduct;
 
     private final String minotaurApi = "https://minotar.net/helm/";
 
@@ -51,5 +54,13 @@ public class Order {
 
     public void setCustomerAvatar(String customerName) {
         this.customerAvatar = minotaurApi + customerName;
+    }
+
+    public Product getPurchasedProduct() {
+        return purchasedProduct;
+    }
+
+    public void setPurchasedProduct(Product purchasedProduct) {
+        this.purchasedProduct = purchasedProduct;
     }
 }
